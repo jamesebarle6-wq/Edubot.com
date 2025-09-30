@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const messages = document.getElementById("messages");
   const themeToggle = document.getElementById("themeToggle");
 
-  // Handle login/signup (demo only)
   authForm.addEventListener("submit", (e) => {
     e.preventDefault();
     authScreen.classList.add("hidden");
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     authScreen.classList.remove("hidden");
   });
 
-  // Add message function
   function addMessage(text, sender) {
     const div = document.createElement("div");
     div.classList.add("message", sender === "user" ? "user-message" : "bot-message");
@@ -34,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     messages.scrollTop = messages.scrollHeight;
   }
 
-  // Handle sending message
   sendBtn.addEventListener("click", () => {
     const text = userInput.value.trim();
     if (text) {
@@ -46,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Theme toggle
   themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
   });
